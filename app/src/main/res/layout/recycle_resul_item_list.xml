@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/tvExamDate"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/medium"
+                android:includeFontPadding="false"
+                android:textColor="@color/darkBlack"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvTotalMarks"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/darkBlack"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvObtainedMarks"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/darkBlack"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvObtainedMarks1"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/medium"
+                android:gravity="center"
+                android:text="Rank"
+                android:includeFontPadding="false"
+                android:textColor="@color/darkBlack"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

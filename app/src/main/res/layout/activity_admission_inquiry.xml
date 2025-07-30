@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layoutBackground"
+    android:orientation="vertical"
+    tools:context=".activity.AdmissionInquiryActivity">
+
+    <include layout="@layout/toolbar_primary" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <EditText
+                android:id="@+id/etFName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_name"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableTint="@color/gray"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:hint="Enter Student Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/etMName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_name"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableTint="@color/gray"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:hint="Enter Father Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/etLName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_name"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableTint="@color/gray"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:hint="Enter Last Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.isapanah.awesomespinner.AwesomeSpinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/edit_text_background"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                app:spinnerDirection="ltr"
+                app:spinnerHint="Last Standard" />
+
+            <EditText
+                android:id="@+id/etLastSchool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_school"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableTint="@color/gray"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:hint="Enter Study School"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/etPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_percent"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableTint="@color/gray"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:hint="Enter Percentage"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13sdp" />
+
+            <EditText
+                android:id="@+id/etContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/edit_text_background"
+                android:drawableLeft="@drawable/ic_smartphone"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableTint="@color/gray"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:hint="Enter Mobile Number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textHintColor"
+                android:textSize="@dimen/_13sdp" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                style="@style/buttonPrimaryRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:text="Submit" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

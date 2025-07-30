@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:fontFamily="@font/medium"
+                        android:includeFontPadding="false"
+                        android:text="Latest News or Events"
+                        android:textColor="@color/darkBlack"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_margin="@dimen/_5sdp" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabBackground="@drawable/tab_selector"
+                        app:tabGravity="center"
+                        app:tabIndicatorHeight="0dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp"
+                android:background="@color/viewBackground" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvFees"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    app:cardBackgroundColor="@color/offWhite"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:text="Paid Fees"
+                                android:textColor="@color/textHintColor"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/medium"
+                                android:includeFontPadding="false"
+                                android:text="Rs. 99999.00"
+                                android:textColor="@color/green"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@color/silver" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:includeFontPadding="false"
+                                android:text="Remaining Fees"
+                                android:textColor="@color/textHintColor"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/medium"
+                                android:includeFontPadding="false"
+                                android:text="Rs. 999.00"
+                                android:textColor="@color/red"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp"
+                android:background="@color/viewBackground"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/cvAttendance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_attendance" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Attendance"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cvTrackVehicle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_tracking" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Track Vehicle"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cvResult"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_result" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Result"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/cvReview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_review" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Review"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cvNews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_news" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="News"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cvDownload"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_download" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Download"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/cvAdmissionInquiry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_admission_inquiry" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Admission Inquiry"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cvGallery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_gallery" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Gallery"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cvManagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_management" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Management"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/cvERP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_erp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="ERP"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cvOnlineTest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_online_test" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Online Test"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cvWebsite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_website" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Website"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/cvAboutUs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_about_us" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="About Us"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cvContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_contact_us" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Contact"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp"
+                            android:visibility="invisible">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_5sdp"
+                                app:cardBackgroundColor="@color/light_blue_gray"
+                                app:cardCornerRadius="@dimen/_60sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/cv_contact_us" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/cardView"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:fontFamily="@font/semibold"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:text="Contact"
+                                android:textAlignment="center"
+                                android:textColor="@color/blackGray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_about_us" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="About Us"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_management" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="Management"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_news" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="News"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_gallery" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="Gallery"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_admission_inquiry" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="Admission Inquiry"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_download" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="Download"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_attendance" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="Attendance"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cvTrackVehicle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_tracking" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="Track Vehicle"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cvContact"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_contact_us" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="Contact"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cvWebsite"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_website" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="Website"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cvResult"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_result" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="Result"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cvReview"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/_20sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/card_view_background"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/cv_review" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="@dimen/_8sdp"
+                                            android:fontFamily="@font/semibold"
+                                            android:includeFontPadding="false"
+                                            android:lines="2"
+                                            android:text="Review"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/textColor"
+                                            android:textSize="12sp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>-->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
